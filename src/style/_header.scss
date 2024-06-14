@@ -1,0 +1,67 @@
+.header {
+    background: linear-gradient(135deg, #2980b9, #2c3e50); /* Gradiente de fundo */
+    color: #fff; /* Cor do texto no cabeçalho */
+    padding: 15px 0; /* Espaçamento interno */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    &__logo {
+        img {
+            max-width: 65px; /* Tamanho máximo do logotipo */
+        }
+    }
+
+    &__nav {
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+
+            li {
+                position: relative;
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                    font-weight: bold;
+                    padding: 10px 15px;
+                    display: block;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: #ffd700; /* Cor ao passar o mouse */
+                    }
+                }
+
+                /* Efeito de underline ao passar o mouse */
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #ffffff;
+                    transform: scaleX(0); /* Inicialmente invisível */
+                    transition: transform 0.3s ease;
+                }
+
+                &:hover:after {
+                    transform: scaleX(1); /* Mostra o underline */
+                }
+            }
+        }
+    }
+}

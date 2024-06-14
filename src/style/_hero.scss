@@ -1,0 +1,42 @@
+@import 'variaveis';
+@import 'mixins';
+
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    text-align: center;
+    background-size: cover;
+    background-color: $corDeFundo;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        &__text {
+            flex: 1;
+            color: #fff; // Exemplo de cor do texto
+            // Estilos para o texto dentro de .hero__content__text
+        }
+        
+        &__image {
+            flex: 1;
+            
+
+            .circle {
+                width: 640px; // Tamanho desejado para o círculo
+                height: 640px; // Tamanho desejado para o círculo
+                border-radius: 50%; // Transforma em círculo
+
+                img {
+                    width: 100%; // Garante que a imagem preencha o círculo
+                    height: 100%; // Garante que a imagem preencha o círculo
+                    object-fit: cover; // Mantém proporções da imagem dentro do círculo
+                    border-radius: 50%; // Garante que a imagem seja um círculo
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
