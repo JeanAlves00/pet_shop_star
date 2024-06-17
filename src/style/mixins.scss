@@ -32,10 +32,13 @@
 
 .title--big {
     @include title(44px);
+    color: $corTextoTitleBig;
 }
 
 .title {
     @include title(40px);
+    color: $corTextoTitle;
+
 }
 
 .title--small {

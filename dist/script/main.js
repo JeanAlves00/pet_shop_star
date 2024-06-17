@@ -1,1 +1,1 @@
-function maisDoMesmo(){console.log("asdasd")}
+document.addEventListener("DOMContentLoaded",function(){var e=document.querySelector(".header__hamburger");let t=document.querySelector(".header__nav");e.addEventListener("click",function(){t.classList.toggle("active")})});
